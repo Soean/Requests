@@ -78,7 +78,7 @@ class Jar implements ArrayAccess, IteratorAggregate {
 	 * Get the value for the item
 	 *
 	 * @param string $offset Item key
-	 * @return string|null Item value (null if offsetExists is false)
+	 * @return string|\WpOrg\Requests\Cookie|null Item value (null if offsetExists is false)
 	 */
 	#[ReturnTypeWillChange]
 	public function offsetGet($offset) {
@@ -92,8 +92,8 @@ class Jar implements ArrayAccess, IteratorAggregate {
 	/**
 	 * Set the given item
 	 *
-	 * @param string $offset Item name
-	 * @param string $value  Item value
+	 * @param string                        $offset Item name
+	 * @param string|\WpOrg\Requests\Cookie $value  Item value
 	 *
 	 * @throws \WpOrg\Requests\Exception On attempting to use dictionary as list (`invalidset`).
 	 */

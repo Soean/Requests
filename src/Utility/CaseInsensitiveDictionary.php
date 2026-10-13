@@ -62,7 +62,7 @@ class CaseInsensitiveDictionary implements ArrayAccess, IteratorAggregate {
 	 * Get the value for the item
 	 *
 	 * @param string $offset Item key
-	 * @return string|null Item value (null if the item key doesn't exist)
+	 * @return mixed Item value (null if the item key doesn't exist)
 	 */
 	#[ReturnTypeWillChange]
 	public function offsetGet($offset) {
@@ -85,7 +85,7 @@ class CaseInsensitiveDictionary implements ArrayAccess, IteratorAggregate {
 	 * Set the given item
 	 *
 	 * @param string $offset Item name
-	 * @param string $value  Item value
+	 * @param mixed  $value  Item value
 	 *
 	 * @throws \WpOrg\Requests\Exception On attempting to use dictionary as list (`invalidset`)
 	 */
